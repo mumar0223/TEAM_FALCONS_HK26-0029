@@ -27,9 +27,9 @@ export function TopNavbar() {
     <header className="h-12 w-full border-b border-border/80 bg-background/90 backdrop-blur-xl shrink-0 px-4 flex items-center justify-between gap-4 z-40 select-none">
       {/* Left: Brand & Nav Tabs */}
       <div className="flex items-center gap-6 shrink-0">
-        <Link href="/dashboard" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="size-7 rounded-lg bg-gradient-to-tr from-emerald-600 via-teal-500 to-emerald-400 flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
-            <Activity className="size-4 stroke-[2.5]" />
+            <span className="font-bold text-xs">अ</span>
           </div>
           <span className="font-heading font-bold text-sm tracking-tight text-foreground">
             Artha<span className="text-emerald-500">Drishti</span>

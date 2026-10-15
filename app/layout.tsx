@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sentix AI | Stock Market Sentiment Tracker",
+  title: "ArthaDrishti | AI-Powered Financial Market Sentiment Intelligence",
   description:
-    "AI-powered financial news & discussion sentiment analysis, price divergence monitoring, sector heatmaps, and FinBERT market insights.",
+    "AI-powered Indian financial news & market sentiment analysis, temporal narrative lead tracker, sector insights, and FinBERT copilots.",
 };
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
