@@ -662,6 +662,11 @@ export async function getAllConversations(): Promise<ConversationRecord[]> {
   return db.conversations.orderBy("updatedAt").reverse().toArray();
 }
 
+export async function getConversationById(id: string): Promise<ConversationRecord | undefined> {
+  await ensureDatabaseSeeded();
+  return db.conversations.get(id);
+}
+
 export async function getConversationMessages(conversationId: string): Promise<MessageRecord[]> {
   await ensureDatabaseSeeded();
   return db.messages
@@ -669,6 +674,8 @@ export async function getConversationMessages(conversationId: string): Promise<M
     .equals(conversationId)
     .sortBy("createdAt");
 }
+
+export const getMessagesByConversationId = getConversationMessages;
 
 export async function addMessage(
   conversationId: string,
@@ -689,6 +696,21 @@ export async function addMessage(
   return msg;
 }
 
+export async function saveMessage(msg: Partial<MessageRecord> & { id: string; conversationId: string; role: any; content: string }): Promise<string> {
+  await ensureDatabaseSeeded();
+  const record: MessageRecord = {
+    id: msg.id,
+    conversationId: msg.conversationId,
+    role: msg.role,
+    content: msg.content,
+    thinking: msg.thinking,
+    createdAt: msg.createdAt || Date.now(),
+  };
+  await db.messages.put(record);
+  await db.conversations.update(msg.conversationId, { updatedAt: Date.now() });
+  return record.id;
+}
+
 export async function createConversation(title = "New Market Analysis"): Promise<ConversationRecord> {
   const conv: ConversationRecord = {
     id: `conv-${Date.now()}`,
@@ -700,3 +722,56 @@ export async function createConversation(title = "New Market Analysis"): Promise
   await db.conversations.put(conv);
   return conv;
 }
+
+export async function saveConversation(conv: ConversationRecord): Promise<void> {
+  await db.conversations.put(conv);
+}
+
+export async function updateConversation(id: string, updates: Partial<ConversationRecord>): Promise<void> {
+  await db.conversations.update(id, updates);
+}
+
+export async function deleteConversation(id: string): Promise<void> {
+  await db.conversations.delete(id);
+  await db.messages.where("conversationId").equals(id).delete();
+}
+
+export interface BusinessProfile {
+  id?: string;
+  businessName?: string;
+  category?: string;
+  city?: string;
+  district?: string;
+  source?: string;
+  updatedAt?: number;
+}
+
+export interface EnterpriseRecord {
+  id: string;
+  domain: string;
+  title: string;
+  summary: string;
+  timestamp: number;
+  data?: any;
+}
+
+export async function getActiveBusinessProfile(): Promise<BusinessProfile | null> {
+  return null;
+}
+
+export async function saveBusinessProfile(profile: Partial<BusinessProfile>): Promise<BusinessProfile> {
+  return profile as BusinessProfile;
+}
+
+export async function clearBusinessProfile(): Promise<void> {}
+
+export async function saveEnterpriseIntelligence(data: any): Promise<any> {
+  return data;
+}
+
+export async function saveEnterpriseRecord(record: EnterpriseRecord): Promise<void> {}
+
+export async function getEnterpriseRecords(domain?: string): Promise<EnterpriseRecord[]> {
+  return [];
+}
+

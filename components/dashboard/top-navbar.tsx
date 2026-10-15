@@ -32,7 +32,7 @@ export function TopNavbar() {
             <Activity className="size-4 stroke-[2.5]" />
           </div>
           <span className="font-heading font-bold text-sm tracking-tight text-foreground">
-            Sentix<span className="text-emerald-500">AI</span>
+            Artha<span className="text-emerald-500">Drishti</span>
           </span>
         </Link>
 
@@ -61,7 +61,11 @@ export function TopNavbar() {
                 t.isPos ? "text-emerald-500" : "text-rose-500"
               }`}
             >
-              {t.isPos ? <TrendingUp className="size-3 mr-0.5" /> : <TrendingDown className="size-3 mr-0.5" />}
+              {t.isPos ? (
+                <TrendingUp className="size-3 mr-0.5" />
+              ) : (
+                <TrendingDown className="size-3 mr-0.5" />
+              )}
               {t.change}
             </span>
           </div>
