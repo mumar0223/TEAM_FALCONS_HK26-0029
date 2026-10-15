@@ -1,7 +1,7 @@
 # ArthaDrishti
 
  <p align="center">
-  <img src="./public/ArthaDrishti Visionary Markets Logo.png" alt="ArthaDrishti Logo" width="500" />
+  <img src="./public/ArthaDrishti Visionary Markets Logo.png" alt="ArthaDrishti Logo" width="350" />
 </p>
 
 <p align="center">
