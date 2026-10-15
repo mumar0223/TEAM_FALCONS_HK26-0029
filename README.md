@@ -1,11 +1,7 @@
 # ArthaDrishti
 
  <p align="center">
-  <img src="./assets/logo.png" alt="ArthaDrishti Logo" width="500" />
-</p>
-
-<p align="center">
-  <strong>Markets Move. We Decode Why.</strong>
+  <img src="./public/ArthaDrishti Visionary Markets Logo.png" alt="ArthaDrishti Logo" width="350" />
 </p>
 
 <p align="center">
