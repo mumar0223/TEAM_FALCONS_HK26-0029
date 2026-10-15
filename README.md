@@ -1,269 +1,204 @@
-# ArthaDrishti AI
-### See Beyond the Market.
+# ArthaDrishti
 
-**ArthaDrishti AI** is an AI-powered stock market sentiment and financial intelligence platform designed to help users understand financial news, analyze market sentiment, and compare sentiment trends with observed stock-price movements.
+<p align="center">
+  <img src="assets/logo.png" alt="ArthaDrishti Logo" width="100%" />
+</p>
 
-The name combines **Artha** (wealth, finance, or economic value) with **Drishti** (vision or perspective), reflecting our goal of bringing clarity to complex financial information.
+<p align="center">
+  <strong>Markets Move. We Decode Why.</strong>
+</p>
+
+<p align="center">
+  An AI-powered stock market sentiment tracker that connects financial news, public sentiment, and historical market movements to help users understand market trends.
+</p>
 
 ---
 
-## 📌 Overview
+## About the Project
 
-Financial markets are influenced by company announcements, earnings reports, economic developments, regulatory changes, and public discussion. Understanding these factors across multiple sources can be challenging.
+**ArthaDrishti** is an AI-powered market intelligence platform designed to analyze financial news sentiment and compare it with observed stock market movements.
 
-ArthaDrishti AI brings financial news, Natural Language Processing (NLP), sentiment analytics, and historical market data together in one platform.
+It helps users understand how financial news and public discussions relate to market sentiment through interactive visualizations, company insights, news analysis, and AI-powered explanations.
 
-**Our mission:** Transform complex financial information into clearer, evidence-based insights using AI.
+Our goal is to make market sentiment easier to understand through data-driven insights—not to predict stock prices with certainty.
 
-## 🎯 Problem Statement
+## Key Features
 
-Financial information is distributed across multiple sources, making it difficult to:
+- **AI-Powered Sentiment Analysis:** Classifies financial headlines as Positive, Negative, or Neutral.
+- **Market Sentiment Dashboard:** Displays sentiment distribution and historical trends.
+- **News Intelligence:** Collects financial headlines with source links and publication timestamps.
+- **Price vs. Sentiment Analysis:** Compares historical stock prices with sentiment trends on a common timeline.
+- **Company Comparison:** Compares sentiment across selected companies.
+- **Sector Insights:** Provides a sector-level overview of market sentiment.
+- **Watchlist:** Tracks sentiment for selected companies.
+- **Sentiment Alerts:** Highlights unusual changes or spikes in sentiment.
+- **AI Market Briefings:** Summarizes relevant news and explains the factors contributing to sentiment.
+- **Text and Voice AI Agents:** Enables users to explore market insights through conversational interfaces.
+- **Data Transparency:** Identifies whether information is live, delayed, cached, or demo data.
 
-- Understand the overall sentiment surrounding a company.
-- Identify positive, negative, and neutral financial news.
-- Track changes in sentiment over time.
-- Compare news sentiment with stock-price movements.
-- Identify unusual changes in financial news coverage.
-- Distinguish live, delayed, cached, and sample data.
+## How It Works
 
-## 💡 Our Solution
+1. **Collect:** Gather financial news and permitted public discussion data from supported sources.
+2. **Process:** Clean the collected data and remove duplicate headlines.
+3. **Analyze:** Use a financial sentiment model such as FinBERT to classify headlines.
+4. **Visualize:** Present sentiment distributions, historical trends, and market price comparisons.
+5. **Explain:** Generate evidence-based summaries using relevant headlines and market metrics.
+6. **Monitor:** Track selected companies and highlight significant sentiment changes.
 
-ArthaDrishti AI uses AI-powered sentiment analysis and interactive visualizations to help users explore financial news and market trends.
+## Initial Companies
 
-The platform aims to:
+The initial dashboard may include:
 
-1. Collect financial headlines from reliable sources.
-2. Classify headlines as Positive, Negative, or Neutral.
-3. Calculate sentiment distributions and trends.
-4. Compare sentiment trends with historical stock prices.
-5. Identify unusual increases in positive or negative news coverage.
-6. Generate evidence-based AI market briefings.
-7. Integrate existing voice and chat agents to answer questions about displayed information.
+- Reliance Industries
+- Tata Consultancy Services (TCS)
+- Infosys
+- HDFC Bank
 
-## 🚀 Key Features
+Company coverage will depend on the availability and permissions of the selected data sources.
 
-### 📊 1. AI-Powered Sentiment Analysis
-Analyze financial headlines using NLP models such as FinBERT to classify sentiment as:
-- 🟢 Positive
-- 🔴 Negative
-- ⚪ Neutral
+## Technology Stack
 
-### 📈 2. Sentiment Dashboard
-Display sentiment distributions, headline counts, and sentiment trends for selected companies and time periods.
-
-### 📉 3. Stock Price vs. Sentiment Analysis
-Compare historical stock prices with news sentiment on a shared timeline using clearly labelled charts.
-
-### 📰 4. Financial News Explorer
-Explore financial headlines with:
-- Original article links
-- Publisher information
-- Publication timestamps
-- Associated company
-- Sentiment classification
-
-### 👀 5. Company Watchlist
-Track multiple companies and review their latest available market changes and sentiment summaries.
-
-### 🚨 6. Sentiment Spike Alerts
-Identify unusual increases in positive or negative news coverage and provide supporting headlines.
-
-### ⚖️ 7. Company Comparison
-Compare sentiment distributions for multiple companies over the same period.
-
-### 🏭 8. Sector Sentiment Analysis
-Explore sentiment across sectors such as:
-- Information Technology
-- Banking and Finance
-- Automobiles
-- Energy
-- Pharmaceuticals
-
-Sector insights depend on available and sufficiently mapped data.
-
-### 🤖 9. AI Market Briefings
-Generate concise summaries of notable financial developments using available headlines and supporting evidence.
-
-### 🔍 10. Explainable Sentiment
-Provide understandable explanations for sentiment classifications, grounded in the available headline or article text.
-
-### 🎙️ 11. Voice and Chat Agent Integration
-Integrate existing voice and chat agents to answer questions using the selected company, dashboard metrics, and supporting headlines.
-
-### 🔄 12. Data Freshness Monitoring
-Clearly indicate whether displayed information is live, delayed, cached, or demonstration data.
-
-## ⚙️ How It Works
-
-1. **Company Selection:** The user selects a company or supported sector.
-2. **Data Collection:** The system retrieves financial news and historical market data.
-3. **Data Processing:** Headlines are normalized, mapped to companies, and deduplicated where practical.
-4. **Sentiment Classification:** An NLP model classifies headlines as positive, negative, or neutral.
-5. **Analytics:** The system calculates sentiment distributions, trends, and comparisons.
-6. **Visualization:** Interactive dashboards display market data and supporting news.
-7. **AI Assistance:** Existing voice and chat agents can explain the displayed evidence where integration is available.
-
-## 🛠️ Technology Stack
-
-| Component | Proposed Technology |
+| Component | Technology |
 |---|---|
-| Programming Language | Python |
+| Frontend | Streamlit or React |
+| Backend | Python, FastAPI |
 | Data Processing | Pandas |
 | Sentiment Analysis | FinBERT |
-| Data Visualization | Plotly |
-| Dashboard | Streamlit or React |
-| Backend API | FastAPI, if required |
-| News Data | Permitted financial news APIs |
-| Market Data | Suitable stock market data provider |
+| Visualizations | Plotly |
 | Database | SQLite or PostgreSQL |
-| AI Integration | Existing voice and chat agents |
+| AI Agents | Existing text and voice agents |
+| Data Sources | Permitted financial news and market data APIs |
 
-*The final technology stack will depend on the implementation. Listing a technology here does not mean that its integration is already complete.*
+*The final stack may vary depending on implementation requirements.*
 
-## 🏗️ Project Architecture
-
-```text
-                 ArthaDrishti AI
-                        |
-             Company / Sector Selection
-                        |
-             +----------+----------+
-             |                     |
-       Financial News          Market Data
-             |                     |
-             +----------+----------+
-                        |
-                  Data Processing
-                        |
-              AI Sentiment Analysis
-                        |
-                 Analytics Engine
-                        |
-             +----------+----------+
-             |                     |
-       Interactive Dashboard   AI Briefings
-             |
-      News & Market Insights
-             |
-       Existing Voice / Chat Agents
-```
-
-## 📂 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-- Python 3.10 or a compatible version for the selected dependencies
+- Python 3.10 or later
 - Git
-- API keys for the selected news and market-data providers, if required
+- API credentials for the selected data providers, if required
 
 ### Installation
 
-Clone the repository:
+**1. Clone the repository**
 
 ```bash
 git clone <YOUR_REPOSITORY_URL>
-cd <YOUR_REPOSITORY_DIRECTORY>
+cd ArthaDrishti
 ```
 
-Create a virtual environment:
+**2. Create a virtual environment**
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it.
+**3. Activate the environment**
 
-**Windows PowerShell:**
+Windows:
 
-```powershell
-.venv\Scripts\Activate.ps1
+```bash
+.venv\Scripts\activate
 ```
 
-**macOS / Linux:**
+macOS/Linux:
 
 ```bash
 source .venv/bin/activate
 ```
 
-Install dependencies:
+**4. Install dependencies**
+
+If your repository includes a `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-If the application uses Streamlit with `app.py` as its entry point, launch it with:
+**5. Configure environment variables**
+
+Create a `.env` file in the project root and add the API keys required by your implementation.
+
+```env
+NEWS_API_KEY=your_news_api_key
+MARKET_DATA_API_KEY=your_market_data_api_key
+```
+
+Use only the variables required by your chosen providers. Never commit real API keys or secrets to GitHub.
+
+**6. Run the application**
+
+For a Streamlit implementation:
 
 ```bash
 streamlit run app.py
 ```
 
-*Adjust these commands to match the actual repository structure and application entry point.*
+For a FastAPI backend:
 
-## 🔐 Environment Configuration
-
-Store API keys in environment variables or a local `.env` file.
-
-Example `.env.example`:
-
-```env
-NEWS_API_KEY=
-MARKET_DATA_API_KEY=
+```bash
+uvicorn main:app --reload
 ```
 
-Add `.env` to `.gitignore` and never upload real API keys, access tokens, or private credentials to GitHub.
+Follow your project's actual entry points and configuration when running the application.
 
-## 🗺️ Development Roadmap
+## Project Structure
 
-- [ ] Develop the dashboard and company selector.
-- [ ] Integrate financial news sources.
-- [ ] Implement AI-based sentiment classification.
-- [ ] Build sentiment distribution cards.
-- [ ] Develop sentiment trend charts.
-- [ ] Integrate historical stock-price data.
-- [ ] Build price-versus-sentiment comparisons.
-- [ ] Add news source links and timestamps.
-- [ ] Implement watchlists and company comparisons.
-- [ ] Develop sentiment spike alerts.
-- [ ] Add evidence-based AI market briefings.
-- [ ] Implement explainable sentiment analysis.
-- [ ] Develop sector sentiment visualization.
-- [ ] Integrate existing voice and chat agents.
-- [ ] Add testing, deployment, and monitoring.
+```text
+ArthaDrishti/
+├── assets/
+│   └── logo.png
+├── frontend/
+├── backend/
+├── data/
+├── models/
+├── tests/
+├── .env.example
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
 
-## 🛡️ Responsible AI and Disclaimer
+This is a suggested structure; folders can be adjusted to match the implementation.
 
-ArthaDrishti AI is an informational and analytical platform, not a financial adviser.
+## Data Transparency and Responsible Use
 
-- Sentiment classifications may be inaccurate.
-- Model confidence is not the probability of a stock price rising or falling.
-- Correlation between sentiment and price movement does not establish causation.
-- Market data may be delayed, incomplete, or unavailable.
-- The platform does not guarantee stock-price predictions or provide assured buy/sell signals.
-- Users should independently verify information before making financial decisions.
+- Clearly label demo, cached, delayed, and live data.
+- Display source links and publication timestamps wherever available.
+- Show sentiment confidence as model confidence, not as the probability of a stock price increasing or decreasing.
+- Explain that sentiment and stock price movements may not have a direct or causal relationship.
+- Do not present AI-generated insights as guaranteed financial predictions.
 
-## 🤝 Contributing
+## Project Scope
 
-Contributions, suggestions, bug reports, and feature ideas are welcome.
+ArthaDrishti focuses on financial news sentiment, market movement comparisons, company insights, and AI-assisted explanations.
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Implement and test your changes.
-4. Submit a pull request describing your contribution.
+Automated trading, guaranteed price forecasting, portfolio management, subscription systems, and custom model training are outside the initial project scope.
 
-Please do not commit API keys or other sensitive information.
+## Future Enhancements
 
-## 🌟 Acknowledgement
+- Broader company and sector coverage
+- Improved regional and multilingual financial news support
+- Customizable sentiment alerts
+- More advanced historical analysis
+- Explainable AI insights with supporting evidence
+- Enhanced text and voice interactions
 
-**ArthaDrishti AI — See Beyond the Market.**
+## Disclaimer
 
-Our vision is to use artificial intelligence responsibly to make complex financial information easier to understand and explore.
+ArthaDrishti is an informational and educational market intelligence project. It does not provide personalized investment advice, guarantee stock market outcomes, or recommend buying or selling securities. Market sentiment is not a reliable standalone predictor of future prices. Always conduct independent research before making financial decisions.
 
-Through this project, we aim to combine innovation, data-driven thinking, and accessible technology to provide a clearer perspective on financial markets.
+## Acknowledgements
 
-## 📄 License
+Built as an AI and data-driven project exploring the relationship between financial news sentiment and market movements.
 
-Choose a license before distributing the project publicly. If you select an open-source license, add the corresponding `LICENSE` file to the repository.
+## License
+
+A license has not yet been specified. Add a `LICENSE` file and update this section when the project license is decided.
 
 ---
 
-*Built with AI, data, and a vision for smarter financial intelligence.*
+<p align="center">
+  <strong>ArthaDrishti — Markets Move. We Decode Why.</strong>
+</p>
