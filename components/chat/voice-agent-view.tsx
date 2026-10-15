@@ -222,7 +222,7 @@ const AssistantCaptionView = React.memo(function AssistantCaptionView({
 
       <div
         className={cn(
-          "max-h-[65px] sm:max-h-[120px] md:max-h-[150px] overflow-y-auto pr-1 text-xs md:text-[13.5px] font-normal leading-relaxed max-w-none",
+          "max-h-[110px] sm:max-h-[160px] overflow-y-auto pr-1 text-xs md:text-[13px] font-normal leading-relaxed max-w-none custom-scrollbar",
           isCameraActive
             ? "text-zinc-100 prose prose-invert prose-p:my-0.5"
             : "text-zinc-800 dark:text-zinc-100 prose prose-zinc dark:prose-invert prose-p:my-0.5",
@@ -260,7 +260,7 @@ const VoiceOrbView = React.memo(function VoiceOrbView({
     <div
       className={cn(
         "relative flex items-center justify-center shrink-0 my-1",
-        isCompact ? "size-14 sm:size-16" : "size-28 sm:size-34 md:size-36",
+        isCompact ? "size-14 sm:size-16" : "size-24 sm:size-28 md:size-32",
       )}
     >
       {/* Outer Ripple Rings */}
@@ -282,7 +282,7 @@ const VoiceOrbView = React.memo(function VoiceOrbView({
       <div
         className={cn(
           "absolute rounded-full border border-indigo-400/30 dark:border-indigo-500/25 transition-transform duration-150 will-change-transform",
-          isCompact ? "-inset-1.5" : "-inset-2 sm:-inset-4",
+          isCompact ? "-inset-1.5" : "-inset-2 sm:-inset-3",
           (isHoldingToSpeak || status === "listening") && "scale-105",
         )}
       />
@@ -293,7 +293,7 @@ const VoiceOrbView = React.memo(function VoiceOrbView({
           "relative rounded-full flex items-center justify-center cursor-pointer overflow-hidden will-change-transform transition-transform duration-150",
           isCompact
             ? "size-14 sm:size-16 shadow-2xl ring-2 ring-zinc-900/80 dark:ring-white/30"
-            : "size-24 sm:size-36 md:size-44 shadow-xl dark:shadow-2xl ring-1 ring-black/5 dark:ring-white/10",
+            : "size-22 sm:size-26 md:size-30 shadow-xl dark:shadow-2xl ring-1 ring-black/5 dark:ring-white/10",
           isHoldingToSpeak &&
             (isCompact
               ? "scale-105 ring-3 ring-emerald-500/60 shadow-emerald-500/40"
@@ -868,11 +868,11 @@ export const VoiceAgentView = React.memo(function VoiceAgentView({
                     ? "bg-white text-zinc-900 border-white shadow-md"
                     : "bg-black/70 text-white/80 border-white/20 hover:bg-black/85 hover:text-white"
                   : showLiveCaptions
-                    ? "bg-forest dark:bg-mint text-white dark:text-forest-dark border-forest dark:border-mint shadow-xs"
-                    : "bg-white/90 dark:bg-card/90 text-ink-muted hover:text-forest dark:hover:text-mint border-sage/40 dark:border-border hover:bg-cream dark:hover:bg-muted",
+                    ? "bg-emerald-600 text-white border-emerald-600 shadow-xs"
+                    : "bg-white/90 dark:bg-card/90 text-foreground border-border/80 hover:bg-muted hover:text-foreground",
               )}
             >
-              <MessageSquareText className="size-4.5" />
+              <MessageSquareText className="size-4" />
               <span className="hidden sm:inline">Captions</span>
             </button>
           </div>
