@@ -5,10 +5,6 @@
 </p>
 
 <p align="center">
-  <strong>Markets Move. We Decode Why.</strong>
-</p>
-
-<p align="center">
   An AI-powered stock market sentiment tracker that connects financial news, public sentiment, and historical market movements to help users understand market trends.
 </p>
 
