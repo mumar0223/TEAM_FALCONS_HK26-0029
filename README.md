@@ -1,7 +1,7 @@
 # ArthaDrishti
 
-<p align="center">
-  <img src="assets/logo.png" alt="ArthaDrishti Logo" width="100%" />
+ <p align="center">
+  <img src="./assets/logo.png" alt="ArthaDrishti Logo" width="500" />
 </p>
 
 <p align="center">
